@@ -1,0 +1,54 @@
+body {
+    background-color: rgb(3, 163, 255);
+    font-family: sans-serif;
+}
+
+.article-main {
+    width: 80%;
+    background-color: #fff;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.nav-bar {
+    margin-bottom: 2rem;
+}
+
+.nav-item {
+    border: 1px solid #000;
+    width: 40%;
+    padding: 1rem;
+    margin: 0 auto;
+    color: #000;
+}
+
+.nav-item:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.article,
+.article-2 {
+    text-align: left;
+}
+
+.article img {
+    float: left;
+    margin-right: 1rem;
+}
+
+.article-2 img {
+    float: right;
+    margin-left: 1rem;
+}
+
+.article p,
+.article-2 p {
+    overflow: auto;
+}
+
+footer {
+    background-color: coral;
+    padding: 1rem;
+}
