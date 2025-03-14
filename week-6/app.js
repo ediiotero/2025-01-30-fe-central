@@ -1,15 +1,15 @@
-const array1 = [1, 2, 3, 4];
+// const array1 = [1, 2, 3, 4];
 
-const initialValue = 0;
-const sumWithInitial = array1.reduce((accumulator, currentValue) => {
-    console.log('acc:', accumulator)
-    console.log('curr:', currentValue)
-    return accumulator + currentValue
-  },
-  initialValue,
-);
+// const initialValue = 0;
+// const sumWithInitial = array1.reduce((accumulator, currentValue) => {
+//     console.log('acc:', accumulator)
+//     console.log('curr:', currentValue)
+//     return accumulator + currentValue
+//   },
+//   initialValue,
+// );
 
-console.log(sumWithInitial);
+// console.log(sumWithInitial);
 
 
 
@@ -23,9 +23,15 @@ const questions = [
     "What city are you in?"
 ];
 
-const answers = []
+// const answers = []
 
-//loop
+// //loop
+// for (let i = 0; i < questions.length; i++) {
+//   const answer = prompt(questions[i])
+//   answers.push(answer)
+// }
+
+// console.log(answers)
 
 
 // ========================
@@ -36,6 +42,19 @@ const answers = []
 
 const num = [2,5,9,10,23]
 
+function getNum(numAry) {
+  const noOdd = numAry.filter(function(number) {
+    return number % 2 === 0
+  })
+
+  const multiNum = noOdd.map(function(number) {
+    return number*3
+  })
+
+  return multiNum
+}
+
+// console.log(getNum(num))
 
 
 // ==========================
@@ -44,7 +63,18 @@ const num = [2,5,9,10,23]
 
 const words = ["cat", "pizza", "javascript"]
 
+const longestWord = function(wordAry) {
+  let currentWord = ''
+  wordAry.forEach(function(word) {
+    if(currentWord.length < word.length) {
+      currentWord = word
+    }
+  })
 
+  return currentWord
+}
+
+// console.log(longestWord(words))
 
 // ==============================
 
@@ -54,7 +84,19 @@ const words = ["cat", "pizza", "javascript"]
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
 
+const newWord = function(word) {
+  const vowels = ['a', 'e', 'i', 'o','u']
+  const wordAry = word.toLowerCase().split('').filter(function(letter){
+    return letter !== ' '
+  })
+  const noVowels = wordAry.filter(function(letter) {
+    return !vowels.includes(letter)
+  })
 
+  return noVowels.join('')
+}
+
+console.log(newWord('The Batman'))
 
 
 // ===================
@@ -67,3 +109,16 @@ const words = ["cat", "pizza", "javascript"]
 // To convert C to F: Divide by 5, then multiply by 9, then add 32
 // To convert F to C: Deduct 32, then multiply by 5, then divide by 9
 
+function cToF(celsius) {
+  const toFahrenheit = (celsius*9)/5+32
+  console.log(celsius + 'C ' + toFahrenheit + 'F')
+}
+
+cToF(20)
+
+function fToC(fahrenheit) {
+  const toCelsius = ((fahrenheit - 32)*5)/9
+  console.log(fahrenheit + 'F ' + toCelsius.toFixed(2) + 'C')
+}
+
+fToC(20)
