@@ -84,3 +84,15 @@ function myFunction() {
   
 // Local variables have Function Scope:
 // They can only be accessed from within the function.
+
+
+// ======================
+// Hoisting example:
+
+// x = 5;
+// console.log(x)
+// var x;
+
+// y = 6;
+// console.log(y)
+// let y;
