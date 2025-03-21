@@ -3,7 +3,20 @@
 // prompt the user again
 
 
+const getNumber = () => {
+    let currentCount = 0
+    for (let i = 0; i < 3; i++) {
+        let question = parseInt(prompt('Pick a number'))
+        while(isNaN(question)) {
+            question = prompt('Pick a number')
+        }
 
+        currentCount = currentCount + question
+    }
+    return currentCount * 3
+}
+
+// console.log(getNumber())
 
 // ============================================
 
@@ -16,7 +29,16 @@
 
 const list = ["My name is ", "I live in ", "My favorite food is "];
 
+const combine = (sentence, word) => `${sentence} ${word}`
 
+const finishSentence = (array, callback) => {
+    for (let i = 0; i < array.length; i++) {
+        const word = prompt(array[i])
+        alert(callback(array[i], word))
+    }
+}
+
+// finishSentence(list, combine)
 
 
 // ============================================
@@ -31,5 +53,16 @@ const list = ["My name is ", "I live in ", "My favorite food is "];
 // and "you lose" if rejected
 
 
+const myPromise = new Promise((resolve, reject) => {
+    const guess = prompt('Guess a number between 1 and 20')
+    setTimeout(() => {
+        if(guess >= 10){
+            resolve('You win')
+        }else{
+            reject('You lose')
+        }
+    }, 3000)
+})
 
 
+myPromise.then(value => alert(value)).catch(value => alert(value))

@@ -89,10 +89,10 @@ function myFunction() {
 // ======================
 // Hoisting example:
 
-// x = 5;
-// console.log(x)
-// var x;
+x = 5;
+console.log(x)
+var x;
 
-// y = 6;
-// console.log(y)
-// let y;
+y = 6;
+console.log(y)
+let y;
