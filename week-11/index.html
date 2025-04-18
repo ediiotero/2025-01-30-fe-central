@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="styles.css">
+  <title>JQuery Form</title>
+</head>
+<body>
+  <nav class="navbar bg-primary">
+    <div class="container-md">
+      <a class="navbar-brand text-white" href="#">Navbar</a>
+    </div>
+  </nav>
+
+  <main class="container mt-3">
+    <form id="myForm">
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputtext" class="form-label">Your name</label>
+        <input type="text" class="form-control" id="name">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <div id="content"></div>
+  </main>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
