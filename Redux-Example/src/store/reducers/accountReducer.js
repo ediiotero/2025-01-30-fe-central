@@ -1,4 +1,4 @@
-const reducer = (state = 400, action) => {
+const reducer = (state = 100, action) => {
     switch(action.type) {
         case 'DEPOSIT':
             return state + action.payload;
